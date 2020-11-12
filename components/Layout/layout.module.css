@@ -1,4 +1,32 @@
 .header_nav {
   background-color: var(--color-white);
-  height: 5rem;
+  height: 6rem;
+  box-shadow: 2px 0 2px var(--color-light-bg);
+  /* border-bottom: 3px solid var(--color-light-input); */
+}
+
+.header_nav_inner {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.header_link {
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+
+.toggle_btn {
+  width: 7%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
 }
