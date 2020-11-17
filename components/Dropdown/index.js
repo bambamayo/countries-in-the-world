@@ -11,27 +11,27 @@ export default function Dropdown({
   ddList,
   ddListItem,
   ddTitleText,
+  itemClicked,
+  showDropdown,
+  handleShowDropdown,
 }) {
-  const [show, setShow] = React.useState(false);
-
-  const handleShow = () => {
-    setShow((prevState) => !prevState);
-  };
   return (
     <div className={ddCont}>
-      <button className={ddTitle} onClick={handleShow}>
+      <button className={ddTitle} onClick={handleShowDropdown}>
         <span className={ddTitleText}>{title}</span>
         <span className={ddIcon}>
           {" "}
           <Icon type={["fas", "angle-down"]} />
         </span>
       </button>
-      {show && (
-        <div
-          className={show ? `${styles.dropdown_list_show} ${ddList}` : ddList}
-        >
+      {showDropdown && (
+        <div className={ddList}>
           {items.map((item) => (
-            <button className={ddListItem} key={item.id}>
+            <button
+              className={ddListItem}
+              key={item.id}
+              onClick={() => itemClicked(item.name)}
+            >
               {item.name}
             </button>
           ))}

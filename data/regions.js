@@ -4,7 +4,7 @@ const regions = [
     id: 1,
   },
   {
-    name: "America",
+    name: "Americas",
     id: 2,
   },
   {
