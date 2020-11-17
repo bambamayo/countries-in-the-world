@@ -1,0 +1,37 @@
+.country {
+  box-shadow: 1px 1px 5px var(--color-light-input);
+  height: 30rem;
+  border-radius: 0.5rem;
+}
+
+.country_imagebtn {
+  width: 100%;
+  padding: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.country_imagebtn img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.country_details {
+  height: 13rem;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.country_name {
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.country_info {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 600;
+}

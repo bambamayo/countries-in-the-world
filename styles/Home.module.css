@@ -4,7 +4,7 @@
 }
 
 .search_filter_cont {
-  width: 90%;
+  width: 120rem;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -71,9 +71,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   border-radius: 0.5rem;
-  margin-top: 0.4rem;
-  transition: 4s ease-in transform;
-  transform: scale(0);
+  margin-top: 0.5rem;
 }
 
 .dropdown_listitem {
@@ -90,4 +88,13 @@
 
 .dropdown_listitem:hover {
   opacity: 0.6;
+}
+
+.country_list {
+  width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 5rem;
+  background-color: var(--color-white);
 }
