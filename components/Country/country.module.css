@@ -1,18 +1,17 @@
 .country {
   box-shadow: 1px 1px 5px var(--color-light-input);
   height: 30rem;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
 }
 
-.country_imagebtn {
+.country_imagelink {
   width: 100%;
-  padding: none;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  display: inline-block;
+  height: 17rem;
+  position: relative;
 }
 
-.country_imagebtn img {
+.country_imagelink img {
   object-fit: cover;
   width: 100%;
 }
@@ -33,5 +32,5 @@
 }
 
 .bold {
-  font-weight: 600;
+  font-weight: 800;
 }

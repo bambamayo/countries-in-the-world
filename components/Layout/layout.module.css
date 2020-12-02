@@ -1,8 +1,7 @@
 .header_nav {
   background-color: var(--color-white);
   height: 6rem;
-  box-shadow: 2px 0 2px var(--color-light-bg);
-  /* border-bottom: 3px solid var(--color-light-input); */
+  border-bottom: 5px solid var(--color-light-bg);
 }
 
 .header_nav_inner {
