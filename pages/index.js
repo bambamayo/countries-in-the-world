@@ -10,16 +10,17 @@ import Country from "../components/Country";
 
 export default function Home({ countries }) {
   const [shownCountries, setShownCountries] = React.useState(countries);
-  const [regionInView, setRegionInView] = React.useState(null);
+  const [regionInView, setRegionInView] = React.useState("Africa");
   const [showDropdown, setShowDropdown] = React.useState(false);
+  const [searchTerm, setSearchTerm] = React.useState("");
 
   const handleShowDropdown = () => {
     setShowDropdown((prevState) => !prevState);
   };
 
-  const router = useRouter();
+  const handleSearchTermChange = (e) => setSearchTerm(e.target.value);
 
-  console.log(regionInView);
+  const router = useRouter();
 
   // HANDLE REGION FILTERING
   React.useEffect(() => {
@@ -40,6 +41,10 @@ export default function Home({ countries }) {
     setShowDropdown((prevState) => !prevState);
   };
 
+  const filteredCountries = shownCountries.filter((country) =>
+    country.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <>
       <Head>
@@ -53,14 +58,16 @@ export default function Home({ countries }) {
             <input
               className={styles.search_input}
               type="text"
+              value={searchTerm}
               placeholder="Search for a country..."
+              onChange={handleSearchTermChange}
             />
             <span className={styles.search_icon}>
               <Icon type={["fas", "search"]} />
             </span>
           </div>
           <Dropdown
-            title="Filter by Region"
+            title={regionInView}
             items={regions}
             ddCont={styles.dropdown_cont}
             ddTitle={styles.dropdown_title}
@@ -72,7 +79,7 @@ export default function Home({ countries }) {
           />
         </div>
         <div className={styles.country_list}>
-          {shownCountries.map((country) => (
+          {filteredCountries.map((country) => (
             <Country
               key={country.name}
               countryFlagAlt={`${country.name} flag`}
@@ -81,6 +88,8 @@ export default function Home({ countries }) {
               countryCount={country.population}
               countryRegion={country.region}
               countryCapital={country.capital}
+              pathname={`/${country.name}`}
+              imageBtnClick={() => router.push(`/${country.name}`)}
             />
           ))}
         </div>

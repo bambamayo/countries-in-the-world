@@ -4,7 +4,7 @@
 }
 
 .search_filter_cont {
-  width: 120rem;
+  max-width: 120rem;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -91,10 +91,10 @@
 }
 
 .country_list {
-  width: 120rem;
+  max-width: 120rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 5rem;
   background-color: var(--color-white);
 }

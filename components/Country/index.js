@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./country.module.css";
 
@@ -9,29 +10,35 @@ export default function Country({
   countryCount,
   countryRegion,
   countryCapital,
+  pathname,
 }) {
   return (
     <div className={styles.country}>
       <aside className={styles.country_imagecont}>
-        <button className={styles.country_imagebtn}>
-          <Image
-            src={countryFlagSrc}
-            alt={countryFlagAlt}
-            width={265}
-            height={160}
-          />
-        </button>
+        <Link href={pathname}>
+          <a className={styles.country_imagelink}>
+            <Image
+              src={countryFlagSrc}
+              alt={countryFlagAlt}
+              width={265}
+              height={160}
+            />
+          </a>
+        </Link>
       </aside>
       <div className={styles.country_details}>
         <h2 className={styles.country_name}>{countryName}</h2>
         <p className={styles.country_info}>
-          <span>Population:</span> <span>{countryCount}</span>
+          <span className={styles.bold}>Population:</span>{" "}
+          <span>{countryCount}</span>
         </p>
         <p className={styles.country_info}>
-          <span>Region:</span> <span>{countryRegion}</span>
+          <span className={styles.bold}>Region:</span>{" "}
+          <span>{countryRegion}</span>
         </p>
         <p className={styles.country_info}>
-          <span>Capital:</span> <span>{countryCapital}</span>
+          <span className={styles.bold}>Capital:</span>{" "}
+          <span>{countryCapital}</span>
         </p>
       </div>
     </div>
