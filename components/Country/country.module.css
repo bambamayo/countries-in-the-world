@@ -1,7 +1,11 @@
 .country {
-  box-shadow: 1px 1px 5px var(--color-light-input);
+  box-shadow: 1px 1px 5px var(--theme-input-bs);
   height: 30rem;
   border-radius: 0.8rem;
+}
+
+.country_imagecont {
+  height: 17rem;
 }
 
 .country_imagelink {
@@ -14,12 +18,14 @@
 .country_imagelink img {
   object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 
 .country_details {
   height: 13rem;
   padding-left: 1.5rem;
   padding-top: 1.5rem;
+  background-color: var(--theme-layout-bg);
 }
 
 .country_name {

@@ -1,7 +1,8 @@
 .header_nav {
-  background-color: var(--color-white);
+  background-color: var(--theme-layout-bg);
   height: 6rem;
-  border-bottom: 5px solid var(--color-light-bg);
+  border-bottom: 5px solid var(--theme-header-border);
+  color: var(--theme-text);
 }
 
 .header_nav_inner {
@@ -20,9 +21,10 @@
 }
 
 .toggle_btn {
-  width: 7%;
+  color: var(--theme-text);
+  width: 8%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem 0;
   cursor: pointer;
   outline: none;
