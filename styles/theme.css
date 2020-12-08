@@ -1,0 +1,15 @@
+.light {
+  --theme-header-border: hsl(0, 0%, 98%);
+  --theme-input-bs: hsl(0, 0%, 52%);
+  --theme-bg: hsl(0, 0%, 98%);
+  --theme-text: hsl(200, 15%, 8%);
+  --theme-layout-bg: hsl(0, 0%, 100%);
+}
+
+.dark {
+  --theme-input-bs: hsl(200, 15%, 8%);
+  --theme-bg: hsl(207, 26%, 17%);
+  --theme-text: hsl(0, 0%, 100%);
+  --theme-layout-bg: hsl(209, 23%, 22%);
+  --theme-header-border: hsl(207, 26%, 17%);
+}

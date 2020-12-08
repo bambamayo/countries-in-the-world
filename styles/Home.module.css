@@ -1,6 +1,8 @@
 .home {
   padding: 3rem 0;
-  background-color: var(--color-light-bg);
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  min-height: calc(100vh - 6rem);
 }
 
 .search_filter_cont {
@@ -23,12 +25,13 @@
   height: 100%;
   border: none;
   border-radius: 0.5rem;
-  background-color: var(--color-white);
-  box-shadow: 1px 1px 5px var(--color-light-input);
+  background-color: var(--theme-layout-bg);
+  box-shadow: 1px 1px 5px var(--theme-input-bs);
   padding-left: 5rem;
   outline: none;
   font-size: 1.2rem;
   font-weight: 300;
+  color: var(--theme-text);
 }
 
 .search_icon {
@@ -53,17 +56,18 @@
   justify-content: space-around;
   align-items: center;
   border-radius: 0.5rem;
-  background-color: var(--color-white);
-  box-shadow: 1px 1px 5px var(--color-light-input);
+  background-color: var(--theme-layout-bg);
+  box-shadow: 1px 1px 5px var(--theme-input-bs);
   border: none;
   outline: none;
+  color: var(--theme-text);
 }
 
 .dropdown_list {
   width: 100%;
   padding: 1.5rem;
-  background-color: var(--color-white);
-  box-shadow: 1px 1px 5px var(--color-light-input);
+  background-color: var(--theme-layout-bg);
+  box-shadow: 1px 1px 5px var(--theme-input-bs);
   position: absolute;
   z-index: 2;
   display: flex;
@@ -80,6 +84,7 @@
   cursor: pointer;
   background-color: transparent;
   transition: 0.3s all ease-in;
+  color: var(--theme-text);
 }
 
 .dropdown_listitem:not(:last-child) {
@@ -96,5 +101,4 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5rem;
-  background-color: var(--color-white);
 }

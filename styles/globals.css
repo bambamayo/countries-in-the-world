@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 
 :root {
-  --color-dark-text: hsl(209, 23%, 22%);
-  --color-dark-bg: hsl(207, 26%, 17%);
-  --color-light-text: hsl(200, 15%, 8%);
-  --color-light-input: hsl(0, 0%, 52%);
-  --color-light-bg: hsl(0, 0%, 98%);
-  --color-white: hsl(0, 0%, 100%);
   --fontsize: 1.4rem;
   --fontsize-lg: 1.6rem;
 }
@@ -25,10 +19,11 @@ html {
 
 body {
   box-sizing: border-box;
-  color: var(--color-light-text);
   font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
   line-height: 1.6;
+  color: var(--theme-text);
+  background-color: var(--theme-bg);
 }
 
 a {
@@ -39,3 +34,10 @@ a {
 li {
   list-style: none;
 }
+
+/* --color-dark-text: hsl(209, 23%, 22%);
+  --color-dark-bg: hsl(207, 26%, 17%);
+  --color-light-text: hsl(200, 15%, 8%);
+  --color-light-input: hsl(0, 0%, 52%);
+  --color-light-bg: hsl(0, 0%, 98%);
+  --color-white: hsl(0, 0%, 100%); */

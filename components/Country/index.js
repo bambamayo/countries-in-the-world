@@ -21,7 +21,7 @@ export default function Country({
               src={countryFlagSrc}
               alt={countryFlagAlt}
               width={265}
-              height={160}
+              height={170}
             />
           </a>
         </Link>
