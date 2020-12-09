@@ -17,12 +17,7 @@ export default function Country({
       <aside className={styles.country_imagecont}>
         <Link href={pathname}>
           <a className={styles.country_imagelink}>
-            <Image
-              src={countryFlagSrc}
-              alt={countryFlagAlt}
-              width={265}
-              height={170}
-            />
+            <Image src={countryFlagSrc} alt={countryFlagAlt} layout="fill" />
           </a>
         </Link>
       </aside>
