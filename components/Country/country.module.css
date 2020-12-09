@@ -1,7 +1,7 @@
 .country {
   box-shadow: 1px 1px 5px var(--theme-input-bs);
-  height: 30rem;
-  border-radius: 0.8rem;
+  height: 31rem;
+  border-radius: 1rem;
 }
 
 .country_imagecont {
@@ -22,7 +22,7 @@
 }
 
 .country_details {
-  height: 13rem;
+  height: 14rem;
   padding-left: 1.5rem;
   padding-top: 1.5rem;
   background-color: var(--theme-layout-bg);
@@ -34,7 +34,7 @@
 }
 
 .country_info {
-  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .bold {

@@ -7,7 +7,7 @@
 
 .header_nav_inner {
   height: 100%;
-  max-width: 120rem;
+  max-width: 89%;
 
   display: flex;
   justify-content: space-between;
@@ -22,13 +22,17 @@
 
 .toggle_btn {
   color: var(--theme-text);
-  width: 8%;
+  padding: 1.2rem 0;
   display: flex;
   justify-content: space-around;
-  padding: 1rem 0;
+
   cursor: pointer;
   outline: none;
   border: none;
   background-color: transparent;
   font-weight: 600;
+}
+
+.toggle_btn_icon {
+  margin-right: 0.5rem;
 }

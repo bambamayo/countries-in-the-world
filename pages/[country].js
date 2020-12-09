@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "../styles/countryDetails.module.css";
+import Icon from "../components/Icon";
 
 export default function Country({ shownCountry, countries }) {
   let country = shownCountry[0];
@@ -24,7 +25,10 @@ export default function Country({ shownCountry, countries }) {
         <div className={styles.country_details_inner}>
           <div className={styles.return_btn_cont}>
             <button className={styles.return_btn} onClick={() => router.back()}>
-              <span className={styles.return_btn_icon}>&larr;</span> Go back
+              <span className={styles.return_btn_icon}>
+                <Icon type={["fas", "long-arrow-alt-left"]} />
+              </span>
+              <span>Back</span>
             </button>
           </div>
           <div className={styles.country}>
@@ -32,8 +36,7 @@ export default function Country({ shownCountry, countries }) {
               <Image
                 src={country.flag}
                 alt={`${country.name} flag`}
-                width={378}
-                height={300}
+                layout="fill"
               />
             </div>
             <div className={styles.country_detail}>
@@ -87,7 +90,9 @@ export default function Country({ shownCountry, countries }) {
                 </div>
               </div>
               <div className="border">
-                <span className={styles.meta_l}>Border Countries: </span>
+                <span className={`${styles.meta_l} ${styles.meta_l_border}`}>
+                  Border Countries:{" "}
+                </span>
                 {country.borders.map((border) => (
                   <button className={styles.border_country_btn} key={border}>
                     {getBorderCountries(border)}
